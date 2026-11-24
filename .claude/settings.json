@@ -1,0 +1,43 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch",
+      "Edit(./workspace/**)",
+      "Write(./workspace/**)",
+      "Bash(python3 scripts/build_dashboard.py:*)",
+      "Bash(python3 scripts/build_document.py:*)",
+      "Bash(python3 scripts/export_excel.py:*)",
+      "Bash(python3 scripts/fetch_page.py:*)",
+      "Bash(python3 scripts/job_key.py:*)",
+      "Bash(python3 scripts/posting_guard.py:*)",
+      "Bash(python3 scripts/profile_keywords.py:*)",
+      "Bash(python3 scripts/robots_check.py:*)",
+      "Bash(python3 scripts/setup_tools.py:*)",
+      "Bash(python3 scripts/verify_layout.py:*)",
+      "Bash(python3 scripts/verify_pdf.py:*)",
+      "Bash(python scripts/build_dashboard.py:*)",
+      "Bash(python scripts/build_document.py:*)",
+      "Bash(python scripts/export_excel.py:*)",
+      "Bash(python scripts/fetch_page.py:*)",
+      "Bash(python scripts/job_key.py:*)",
+      "Bash(python scripts/posting_guard.py:*)",
+      "Bash(python scripts/profile_keywords.py:*)",
+      "Bash(python scripts/robots_check.py:*)",
+      "Bash(python scripts/setup_tools.py:*)",
+      "Bash(python scripts/verify_layout.py:*)",
+      "Bash(python scripts/verify_pdf.py:*)",
+      "Bash(python3 scripts/dashboard.py:*)",
+      "Bash(python scripts/dashboard.py:*)"
+    ],
+    "deny": [
+      "Read(./workspace/personal.tex)",
+      "Edit(./workspace/personal.tex)",
+      "Bash(git push:*)",
+      "Bash(curl:*)",
+      "Bash(wget:*)",
+      "Bash(rm -rf:*)",
+      "Bash(sudo:*)"
+    ]
+  }
+}

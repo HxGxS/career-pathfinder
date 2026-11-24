@@ -1,0 +1,31 @@
+# Your job search stays on your computer: everything the workflow saves lives in workspace/
+workspace/*
+!workspace/README.md
+!workspace/.gitkeep
+
+# Never commit a filled-in personal.tex anywhere (templates/personal.tex holds placeholders only)
+personal.tex
+!templates/personal.tex
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# LaTeX build leftovers (builds normally happen in a temporary folder)
+*.aux
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# Secrets and local settings
+.env
+.env.*
+.claude/settings.local.json
+
+# OS clutter
+.DS_Store
+Thumbs.db

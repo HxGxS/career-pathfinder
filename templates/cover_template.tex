@@ -1,0 +1,73 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Adapted for Career Pathfinder from the job-application-assistant workflow.
+% Licensed under the MIT License; see README.md (Credits and licence).
+%
+% Cover Letter - [Company], [Role]
+%
+% Example cover letter with placeholder content. This is the structural
+% reference for tailored letters (see .claude/skills/career-cover-letter-template/SKILL.md) and the
+% smoke test for cover.cls (GitHub tests/ folder): it must always compile with
+% xelatex to exactly 1 page.
+% It demonstrates the correct itemize pattern: the list sits OUTSIDE
+% \lettercontent{} (whose trailing \\ errors on \end{itemize}) and is
+% wrapped in Raleway-Medium so the bullet font matches the body.
+% Personal details come from personal.tex - never type them into this file.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{cover}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\rfoot{Page \thepage \hspace{0pt}}
+\thispagestyle{empty}
+\renewcommand{\headrulewidth}{0pt}
+\input{personal}
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     TITLE NAME
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{}{\Huge{\myfirstname\ \mylastname}}{  \href{mailto:\myemail}{\myemail} | \myphone |  \urlstyle{same}\href{\myportfolio}{\myportfoliotext}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     MAIN COVER LETTER CONTENT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Only when the address of the office being applied to was found (posting or company
+% research). Otherwise delete these two lines.
+\companyname{[Company]}
+\companyaddress{[Applying office address]}
+
+\currentdate{\today}
+\section{[Headline: title or education + keyword from the posting]}
+
+\lettercontent{Dear [First Last / Hiring Manager],}
+
+\lettercontent{[Block 1 - opening and why this company: name the role, state your strongest connection to it in one sentence, then why this specific company. Keep it to 2--3 sentences.]}
+
+\subsection{[Optional subheading: descriptive, with a posting keyword]}
+\lettercontent{[Block 2 - task-solving body: your most relevant experience, framed toward the tasks in the posting. Follow with 3--5 concrete bullets:]}
+
+{\raggedright\fontspec[Path = \ralewaypath]{Raleway-Medium}\fontsize{11pt}{13pt}\selectfont
+\begin{itemize}
+    \item \textbf{[Achievement 1]:} [concrete result, with the user's real number where one exists]
+    \item \textbf{[Achievement 2]:} [skill or project mapped to a posting requirement]
+    \item \textbf{[Achievement 3]:} [evidence for a nice-to-have requirement]
+\end{itemize}\par}
+\vspace{6pt}
+
+\lettercontent{[Block 3 - company connection and close: why this company specifically. Reference a verified specific from the company research file or the saved job description: a product, a stated priority, a team. Never generic.]}
+
+\lettercontent{I look forward to hearing from you.}
+
+\begin{flushright}
+% Note: no trailing \\ inside \closing{} - cover.cls appends its own \\, and a
+% doubled break triggers "There's no line here to end."
+\closing{Kind regards,}
+
+\signature{\myfirstname\ \mylastname}
+\end{flushright}
+\end{document}

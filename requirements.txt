@@ -1,0 +1,6 @@
+# Python add-ons for the Career Pathfinder scripts (install: python3 scripts/setup_tools.py --install,
+# or: pip install -r requirements.txt). LaTeX (MacTeX on Mac, MiKTeX on Windows) is installed
+# separately; see README.md.
+openpyxl>=3.1      # Excel export, only when the user asks for it
+pdfplumber>=0.11   # PDF text and layout checks (preferred)
+pypdf>=4.0         # PDF text check (second choice)

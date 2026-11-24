@@ -1,0 +1,12 @@
+# OpenAI Codex settings for Career Pathfinder (see README.md, "Using other AI tools").
+# Blocks reading and writing workspace/personal.tex, where you keep your contact details.
+# Codex reads this file only after you mark the project as trusted.
+# Uses the permission-profile format from Codex's documentation (marked Beta there).
+default_permissions = "career-pathfinder"
+
+[permissions.career-pathfinder.filesystem]
+":minimal" = "read"
+
+[permissions.career-pathfinder.filesystem.":workspace_roots"]
+"." = "write"
+"workspace/personal.tex" = "deny"
